@@ -20,6 +20,8 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
+    "git-commit-msg-linter": "^5.0.4",
+    "lint-staged": "^15.1.0",
     "postcss": "^8",
     "prettier-config-standard": "^7.0.0",
     "tailwindcss": "^3.3.0",
