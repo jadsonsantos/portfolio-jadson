@@ -1,0 +1,21 @@
+.about {
+  padding: 196px 0;
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  &__infos {
+    max-width: 496px;
+  }
+
+  &__skills {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 200px;
+  }
+}

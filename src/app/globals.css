@@ -17,5 +17,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
+  background: linear-gradient(183deg, #0A2B4E 19.54%, #39B989 113.36%) no-repeat;
 }
