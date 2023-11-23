@@ -1,7 +1,9 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './Header.module.scss'
 
+import logoIcon from '../../../public/logo.svg'
 import { menu } from './data'
 
 const Header = () => (
@@ -9,7 +11,11 @@ const Header = () => (
     <div className="container">
       <nav className={styles.header__nav}>
         <Link href="/" className={styles.header__item}>
-          jadson
+          <Image
+            src={logoIcon}
+            alt="Logo contendo o nome Jadson"
+            className={styles.header__logo}
+          />
         </Link>
         <ul className={styles.header__menu}>
           {menu.map(({ title }) => (
