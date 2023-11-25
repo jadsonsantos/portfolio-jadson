@@ -1,0 +1,18 @@
+.cases {
+  padding: 0 0 390px;
+  color: white;
+
+  &__list {
+    padding-top: 78px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  @media (min-width: 1366px) {
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

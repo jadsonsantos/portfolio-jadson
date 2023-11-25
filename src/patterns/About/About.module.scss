@@ -13,9 +13,14 @@
   }
 
   &__skills {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-top: 200px;
+  }
+
+  @media (min-width: 1366px) {
+    &__skills {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
