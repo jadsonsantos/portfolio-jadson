@@ -3,9 +3,7 @@ type Props = {
   className?: React.ReactNode
 }
 
-const Typography = (props: Props) => {
-  const { className, children } = props
-
+const Typography = ({ className, children }: Props) => {
   return <p className={`typography ${className}`}>{children}</p>
 }
 

@@ -3,9 +3,7 @@ type Props = {
   className?: React.ReactNode
 }
 
-const Heading = (props: Props) => {
-  const { children, className } = props
-
+const Heading = ({ children, className }: Props) => {
   return <h2 className={`heading ${className}`}>{children}</h2>
 }
 

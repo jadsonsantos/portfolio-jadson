@@ -7,9 +7,7 @@ type Props = {
   content: string
 }
 
-const Skill = (props: Props) => {
-  const { title, content } = props
-
+const Skill = ({ title, content }: Props) => {
   return (
     <section className={styles.skill}>
       <Typography className={styles.skill__title}>{title}</Typography>
