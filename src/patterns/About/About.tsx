@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Container from 'components/Container'
 import Heading from 'components/foundation/Heading'
@@ -7,14 +8,11 @@ import Skill from 'components/Skill'
 
 import styles from './About.module.scss'
 
-import instagramIcon from '../../../public/instagram.svg'
-import linkedinIcon from '../../../public/linkedin.svg'
-import whatsAppIcon from '../../../public/whatsApp.svg'
-import skills from './data'
+import { skills, socialLinks } from './data'
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <Container>
         <div className={styles.about__infos}>
           <Heading>Quem sou eu</Heading>
@@ -26,9 +24,21 @@ const About = () => {
             mecanismos de busca.
           </Typograph>
           <div className={styles.about__social}>
-            <Image src={linkedinIcon} alt="Me siga no Linkedin" />
-            <Image src={instagramIcon} alt="Me siga no Instagram" />
-            <Image src={whatsAppIcon} alt="Me siga no WhatsApp" />
+            {socialLinks.map(({ link, title }) => (
+              <Link
+                href={link}
+                target="_blank"
+                rel="noopener noreferer"
+                key={title}
+              >
+                <Image
+                  src={`images/${title}.svg`}
+                  width={28}
+                  height={28}
+                  alt={`Ícone do ${title}`}
+                />
+              </Link>
+            ))}
           </div>
         </div>
         <div className={styles.about__skills}>

@@ -10,4 +10,19 @@ const skills = [
   }
 ]
 
-export default skills
+const socialLinks = [
+  {
+    link: 'https://www.linkedin.com/in/jadsonsantos/',
+    title: 'linkedin'
+  },
+  {
+    link: 'https://github.com/jadsonsantos/',
+    title: 'github'
+  },
+  {
+    link: 'https://www.instagram.com/eujadsonsantos/',
+    title: 'instagram'
+  }
+]
+
+export { skills, socialLinks }
