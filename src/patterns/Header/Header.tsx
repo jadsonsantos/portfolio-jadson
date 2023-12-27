@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Menu from 'components/Menu'
+
 import styles from './Header.module.scss'
 
 import logoIcon from '../../../public/logo.svg'
@@ -17,13 +19,7 @@ const Header = () => (
             className={styles.header__logo}
           />
         </Link>
-        <ul className={styles.header__menu}>
-          {menu.map(({ title }) => (
-            <li key={title} className={styles.header__item}>
-              {title}
-            </li>
-          ))}
-        </ul>
+        <Menu menuItems={menu} />
       </nav>
     </div>
   </header>
