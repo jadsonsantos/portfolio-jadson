@@ -3,3 +3,8 @@ $primary-color: #64ff00;
 :export {
   primaryColor: $primary-color;
 }
+
+:root {
+  --font-primary: "Roboto, sans-serif";
+  --font-secondary: "Inter, sans-serif";
+}
