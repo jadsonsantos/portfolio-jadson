@@ -1,5 +1,10 @@
 .hero {
-  padding: 85px 0 0;
+  &__container {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__infos {
     margin-bottom: 30px;
@@ -8,29 +13,36 @@
 
   &__presentation {
     margin-top: 10px;
-    color: #FFF;
+    color: #fff;
     font-size: 16px;
     line-height: 30px;
   }
 
   &__title {
     margin-bottom: 30px;
-    color: #FFF;
+    color: #fff;
     font-size: 54px;
     font-weight: 800;
     line-height: 70px;
   }
 
   &__arrow {
-    margin: 127px auto 0;
+    display: none;
+    margin: auto auto 0 auto;
   }
 
   @media (min-width: 1024px) {
-    height: calc(100vh - 80px);
+    &__container {
+      height: calc(100vh - 80px);
+    }
 
     &__wrapper {
       display: flex;
       justify-content: space-between;
+    }
+
+    &__arrow {
+      display: block;
     }
   }
 }
