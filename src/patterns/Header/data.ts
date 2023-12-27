@@ -1,9 +1,11 @@
 const menu = [
   {
-    title: 'Sobre mim'
+    title: 'Sobre mim',
+    link: '#about'
   },
   {
-    title: 'Projetos'
+    title: 'Projetos',
+    link: '#cases'
   },
   {
     title: 'Contato'

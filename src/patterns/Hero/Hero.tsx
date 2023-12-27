@@ -20,9 +20,8 @@ const Hero = () => {
             <h4 className={styles.hero__presentation}>Olá, eu sou o</h4>
             <h2 className={styles.hero__title}>Jadson Gonçalves</h2>
             <Typography>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industrys standard dummy text
-              ever since the 1500s,
+              Desenvolvedor Front-End apaixonado por criar experiências web
+              excepcionais, assegurando que sejam rápidas e responsivas.
             </Typography>
           </div>
           <Image src={profilePicture} width={350} alt="Foto do Jadson" />
