@@ -1,14 +1,9 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
 
 import './globals.css'
 import '../styles/base.scss'
 
-const font = Roboto({
-  weight: ['400', '500', '700'],
-  style: ['normal'],
-  subsets: ['latin']
-})
+import { roboto, inter } from '../styles/fonts'
 
 export const metadata: Metadata = {
   title: 'Jadson Santos',
@@ -22,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={`${inter.variable} ${roboto.variable}`}>{children}</body>
     </html>
   )
 }
