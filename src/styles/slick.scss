@@ -1,0 +1,19 @@
+.cases {
+  .slick-list {
+    margin-bottom: 88px;
+  }
+
+  .slick-dots li button:before {
+    content: '';
+    opacity: 1;
+    border: 1px solid white;
+    color: transparent;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    background-color: white;
+  }
+}
