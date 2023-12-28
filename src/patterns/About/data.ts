@@ -6,7 +6,7 @@ const skills = [
   {
     title: 'Dev Tools:',
     content:
-      'VS Code, Atom, Bootstrap, Codepen, Github, Bitbucket, Github, Terminal'
+      'VS Code, Bootstrap, Github, Bitbucket, Git, New Relic, Jest, Cypress'
   }
 ]
 
