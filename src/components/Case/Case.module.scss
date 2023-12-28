@@ -10,7 +10,7 @@
 
   &__title {
     margin-bottom: 34px;
-    font-size: 45px;
+    font-size: 32px;
     line-height: 102.2%;
   }
 
@@ -20,5 +20,10 @@
 
   @media (min-width: 1366px) {
     display: flex !important;
+
+    &__title {
+      font-size: 45px;
+      line-height: 102.2%;
+    }
   }
 }

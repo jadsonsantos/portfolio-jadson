@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Container from 'components/Container'
+import Heading from 'components/foundation/Heading'
 import Typography from 'components/foundation/Typography'
 
 import styles from './Hero.module.scss'
@@ -18,7 +19,7 @@ const Hero = () => {
           <div className={styles.hero__infos}>
             <Image src={heroIllustration} alt="Ilustração de uma barra" />
             <h4 className={styles.hero__presentation}>Olá, eu sou o</h4>
-            <h2 className={styles.hero__title}>Jadson Gonçalves</h2>
+            <Heading>Jadson Santos</Heading>
             <Typography>
               Desenvolvedor Front-End apaixonado por criar experiências web
               excepcionais, assegurando que sejam rápidas e responsivas.
