@@ -11,7 +11,7 @@ import cases from './data'
 
 const Cases: React.FC = () => {
   return (
-    <section className={styles.cases} id="cases">
+    <section className={`cases ${styles.cases}`} id="cases">
       <Container>
         <Heading>Projetos</Heading>
         <Typography>Conheça alguns dos projetos que desenvolvi</Typography>

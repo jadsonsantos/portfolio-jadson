@@ -10,7 +10,7 @@ const cases = [
   {
     image: 'shopping-cart',
     tags: 'html5 . css3 . javascript . reactjs',
-    title: 'Carrinho de Compras com ReactJS',
+    title: 'Carrinho de Compras',
     link: 'https://github.com/jadsonsantos/shopping-cart',
     description:
       'Carrinho de compras com recursos como listagem de produtos, busca de produtos via API do Mercado Livre, adição e remoção de produtos do carrinho.'
