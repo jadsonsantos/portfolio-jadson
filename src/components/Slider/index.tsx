@@ -9,6 +9,8 @@ interface Props {
   slidesToScroll?: number
   dots?: boolean
   arrows?: boolean
+  centerMode?: boolean
+  centerPadding?: string
 }
 
 const Carousel: React.FC<Props> = ({
@@ -16,7 +18,9 @@ const Carousel: React.FC<Props> = ({
   slidesToShow = 1,
   slidesToScroll = 1,
   dots = true,
-  arrows = true
+  arrows = true,
+  centerMode = false,
+  centerPadding = ''
 }: Props) => {
   const settings: Settings = {
     dots,
@@ -25,6 +29,8 @@ const Carousel: React.FC<Props> = ({
     speed: 500,
     slidesToShow,
     slidesToScroll,
+    centerMode,
+    centerPadding,
     responsive: [
       {
         breakpoint: 1024,

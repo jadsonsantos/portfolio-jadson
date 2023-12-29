@@ -1,6 +1,6 @@
 .cases {
   .slick-list {
-    margin-bottom: 88px;
+    margin-bottom: 20px;
   }
 
   .slick-dots li button:before {
@@ -15,5 +15,11 @@
   
   .slick-dots li.slick-active button:before {
     background-color: white;
+  }
+
+  @media (min-width: 1366px) {
+    .slick-list {
+      margin-bottom: 88px;
+    }
   }
 }
