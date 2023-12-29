@@ -8,7 +8,7 @@ const roboto = Roboto({
 })
 
 const inter = Inter({
-  weight: ['700'],
+  weight: ['400', '700'],
   style: ['normal'],
   subsets: ['latin'],
   variable: '--font-secondary'
