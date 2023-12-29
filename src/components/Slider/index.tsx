@@ -7,26 +7,42 @@ interface Props {
   children: React.ReactNode
   slidesToShow?: number
   slidesToScroll?: number
+  initialSlide?: number
+  infinite?: boolean
   dots?: boolean
   arrows?: boolean
   centerMode?: boolean
   centerPadding?: string
+  autoplay?: boolean
+  speed?: number
+  autoplaySpeed?: number
+  cssEase?: string
 }
 
 const Carousel: React.FC<Props> = ({
   children,
   slidesToShow = 1,
   slidesToScroll = 1,
+  initialSlide = 0,
+  infinite = true,
   dots = true,
   arrows = true,
   centerMode = false,
-  centerPadding = ''
+  centerPadding = '',
+  autoplay = false,
+  speed = 800,
+  autoplaySpeed = 800,
+  cssEase = 'linear'
 }: Props) => {
   const settings: Settings = {
     dots,
     arrows,
-    infinite: true,
-    speed: 500,
+    infinite,
+    initialSlide,
+    autoplay,
+    speed,
+    autoplaySpeed,
+    cssEase,
     slidesToShow,
     slidesToScroll,
     centerMode,

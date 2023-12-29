@@ -17,9 +17,14 @@ interface CaseProps {
   cases: Case[]
 }
 
+const settings = {
+  slidesToShow: 1,
+  arrows: false
+}
+
 const Case: React.FC<CaseProps> = ({ cases }: CaseProps) => {
   return (
-    <Carousel slidesToShow={1} arrows={false}>
+    <Carousel {...settings}>
       {cases.map((item) => (
         <div className={styles.case} key={item.title}>
           {/* <img src={item.image} alt={item.title} /> */}
