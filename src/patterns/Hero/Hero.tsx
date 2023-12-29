@@ -9,7 +9,7 @@ import styles from './Hero.module.scss'
 
 import heroArrow from '../../../public/images/hero-arrow.svg'
 import heroIllustration from '../../../public/images/hero-illustration-1.svg'
-import profilePicture from '../../../public/images/profile-jadson-white.png'
+import profilePicture from '../../../public/images/jadson.svg'
 
 const Hero = () => {
   return (
@@ -22,7 +22,7 @@ const Hero = () => {
             <Heading>Jadson Santos</Heading>
             <Typography>
               Desenvolvedor Front-End apaixonado por criar experiências web
-              excepcionais, assegurando que sejam rápidas e responsivas.
+              excepcionais que sejam rápidas e responsivas.
             </Typography>
           </div>
           <Image src={profilePicture} width={350} alt="Foto do Jadson" />

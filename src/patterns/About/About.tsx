@@ -8,12 +8,13 @@ import Skill from 'components/Skill'
 
 import styles from './About.module.scss'
 
+import aboutImage from '../../../public/images/about.svg'
 import { skills, socialLinks } from './data'
 
 const About = () => {
   return (
     <section className={styles.about} id="about">
-      <Container>
+      <Container className={styles.about__container}>
         <div className={styles.about__infos}>
           <Heading>Quem sou eu</Heading>
           <Typograph>
@@ -41,6 +42,7 @@ const About = () => {
             ))}
           </div>
         </div>
+        <Image src={aboutImage} alt="Imagem da seção sobre" />
         <div className={styles.about__skills}>
           {skills.map((skill) => {
             const { title, content } = skill
