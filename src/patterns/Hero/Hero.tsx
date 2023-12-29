@@ -17,7 +17,11 @@ const Hero = () => {
       <Container className={styles.hero__container}>
         <div className={styles.hero__wrapper}>
           <div className={styles.hero__infos}>
-            <Image src={heroIllustration} alt="Ilustração de uma barra" />
+            <Image
+              src={heroIllustration}
+              alt="Ilustração de uma barra"
+              priority
+            />
             <h4 className={styles.hero__presentation}>Olá, eu sou o</h4>
             <Heading>Jadson Santos</Heading>
             <Typography>
@@ -25,7 +29,7 @@ const Hero = () => {
               excepcionais que sejam rápidas e responsivas.
             </Typography>
           </div>
-          <Image src={profilePicture} alt="Foto do Jadson" />
+          <Image src={profilePicture} alt="Foto do Jadson" priority />
         </div>
         <Link className={styles.hero__arrow} href="#about">
           <Image src={heroArrow} width={17} alt="Seta voltada para baixo" />
