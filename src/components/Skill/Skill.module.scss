@@ -3,6 +3,12 @@
   margin-bottom: 50px;
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 1366px) {
+    &__title {
+      margin-bottom: 20px;
+    }
   }
 }

@@ -7,8 +7,8 @@
   }
 
   &__infos {
-    margin-bottom: 30px;
-    max-width: 590px;
+    margin-bottom: 60px;
+    max-width: 450px;
   }
 
   &__presentation {
@@ -32,6 +32,10 @@
     &__wrapper {
       display: flex;
       justify-content: space-between;
+    }
+
+    &__infos {
+      margin-bottom: 30px;
     }
 
     &__arrow {
