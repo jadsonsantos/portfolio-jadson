@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import '../styles/base.scss'
 
+import Analytics from 'components/Analytics'
+
 import { roboto, inter } from '../styles/fonts'
 
 export const metadata: Metadata = {
@@ -17,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${roboto.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${roboto.variable}`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
