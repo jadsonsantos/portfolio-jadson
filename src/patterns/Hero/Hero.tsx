@@ -25,7 +25,7 @@ const Hero = () => {
               excepcionais que sejam rápidas e responsivas.
             </Typography>
           </div>
-          <Image src={profilePicture} width={350} alt="Foto do Jadson" />
+          <Image src={profilePicture} alt="Foto do Jadson" />
         </div>
         <Link className={styles.hero__arrow} href="#about">
           <Image src={heroArrow} width={17} alt="Seta voltada para baixo" />

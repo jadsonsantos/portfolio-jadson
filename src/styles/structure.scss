@@ -9,4 +9,8 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 24px;
+
+  @media(min-width: 1536px) {
+    max-width: 1258px;
+  }
 }
