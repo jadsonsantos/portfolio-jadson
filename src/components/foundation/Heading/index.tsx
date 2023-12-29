@@ -4,7 +4,7 @@ type Props = {
 }
 
 const Heading = ({ children, className }: Props) => {
-  return <h2 className={`heading ${className}`}>{children}</h2>
+  return <h2 className={`heading ${className || ''}`}>{children}</h2>
 }
 
 export default Heading

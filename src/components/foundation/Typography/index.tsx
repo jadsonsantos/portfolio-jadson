@@ -4,7 +4,7 @@ type Props = {
 }
 
 const Typography = ({ className, children }: Props) => {
-  return <p className={`typography ${className}`}>{children}</p>
+  return <p className={`typography ${className || ''}`}>{children}</p>
 }
 
 export default Typography
