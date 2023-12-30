@@ -28,12 +28,14 @@ const Case: React.FC<CaseProps> = ({ cases }: CaseProps) => {
       {cases.map((item) => (
         <div className={styles.case} key={item.title}>
           {/* <img src={item.image} alt={item.title} /> */}
-          <Image
-            alt="teste"
-            src={`/images/case.png`}
-            width={562}
-            height={478}
-          />
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            <Image
+              alt="teste"
+              src={`/images/case.png`}
+              width={562}
+              height={478}
+            />
+          </a>
           <div className={styles.case__infos}>
             <h2 className={styles.case__title}>{item.title}</h2>
             <p className={styles.case__tags}>{item.tags}</p>
