@@ -1,7 +1,8 @@
 const skills = [
   {
     title: 'Linguagens:',
-    content: 'HTML5, Pug, CSS3, Sass, JavaScript, TypeScript, ReactJs, NextJs'
+    content:
+      'HTML5, Pug.js, CSS3, Sass, JavaScript, TypeScript, ReactJs, NextJs, VTEX CMS'
   },
   {
     title: 'Dev Tools:',
