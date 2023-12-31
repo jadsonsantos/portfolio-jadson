@@ -7,9 +7,9 @@ import Typography from 'components/foundation/Typography'
 
 import styles from './Hero.module.scss'
 
+import profilePicture from '../../../public/images/about.svg'
 import heroArrow from '../../../public/images/hero-arrow.svg'
 import heroIllustration from '../../../public/images/hero-illustration-1.svg'
-import profilePicture from '../../../public/images/jadson.svg'
 
 const Hero = () => {
   return (
