@@ -11,7 +11,7 @@ const cases = [
     image: 'shopping-cart',
     tags: 'html5 . css3 . javascript . reactjs',
     title: 'Carrinho de Compras',
-    link: 'https://github.com/jadsonsantos/shopping-cart',
+    link: 'https://shopping-cart-nine-mu.vercel.app/',
     description:
       'Carrinho de compras com recursos como listagem de produtos, busca de produtos via API do Mercado Livre, adição e remoção de produtos do carrinho.'
   },
@@ -19,7 +19,7 @@ const cases = [
     image: 'prime-flix',
     tags: 'html5 . css3 . reactjs',
     title: 'Filmaria com ReactJS',
-    link: 'https://github.com/jadsonsantos/prime-flix',
+    link: 'https://primeflix-psi.vercel.app/',
     description:
       'Projeto de filmes desenvolvido com ReactJS. Permite listar filmes, consumindo a API do The Movie DB, adicionar e remover filmes da lista de favoritos.'
   }
