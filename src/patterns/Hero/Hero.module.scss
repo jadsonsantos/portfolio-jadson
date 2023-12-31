@@ -1,6 +1,6 @@
 .hero {
   &__container {
-    padding-top: 85px;
+    padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
@@ -22,15 +22,18 @@
   }
 
   &__arrow {
+    padding-top: 50px;
     margin: 0 auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     &__container {
       height: calc(100dvh - 80px);
       padding-top: 180px;
     }
+  }
 
+  @media (min-width: 1024px) {
     &__wrapper {
       display: flex;
       justify-content: space-between;
