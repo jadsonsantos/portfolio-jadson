@@ -9,7 +9,7 @@
   }
 
   &__infos {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     max-width: 450px;
   }
 
@@ -26,20 +26,21 @@
   }
 
   @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
     &__container {
       height: calc(100svh - 80px);
       padding-top: 180px;
     }
-  }
 
-  @media (min-width: 1024px) {
     &__wrapper {
       display: flex;
       justify-content: space-between;
     }
 
     &__infos {
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
   }
 }
