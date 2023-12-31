@@ -1,6 +1,9 @@
 .skill {
   flex-basis: 450px;
-  margin-bottom: 50px;
+
+  &:first-of-type {
+    margin-bottom: 50px;
+  }
 
   &__title {
     margin-bottom: 10px;

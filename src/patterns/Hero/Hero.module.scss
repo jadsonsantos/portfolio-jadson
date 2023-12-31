@@ -4,6 +4,7 @@
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
 
   &__infos {
@@ -20,7 +21,6 @@
   }
 
   &__arrow {
-    display: none;
     margin: auto auto 0 auto;
   }
 
@@ -37,10 +37,6 @@
 
     &__infos {
       margin-bottom: 30px;
-    }
-
-    &__arrow {
-      display: block;
     }
   }
 }
