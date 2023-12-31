@@ -4,7 +4,8 @@
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    justify-content: space-between;
+    height: 100dvh;
   }
 
   &__infos {
@@ -21,12 +22,12 @@
   }
 
   &__arrow {
-    margin: auto auto 0 auto;
+    margin: 0 auto;
   }
 
   @media (min-width: 1024px) {
     &__container {
-      height: calc(100vh - 80px);
+      height: calc(100dvh - 80px);
       padding-top: 180px;
     }
 
