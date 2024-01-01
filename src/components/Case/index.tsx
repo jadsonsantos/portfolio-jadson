@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
+import Link from 'components/Link'
 import Carousel from 'components/Slider'
 
 import styles from './Case.module.scss'
@@ -9,8 +10,13 @@ interface Case {
   image: string
   tags: string
   title: string
-  link: string
+  link: Link
   description: string
+}
+
+interface Link {
+  site: string
+  github?: string
 }
 
 interface CaseProps {
@@ -25,29 +31,29 @@ const settings = {
 const Case: React.FC<CaseProps> = ({ cases }: CaseProps) => {
   return (
     <Carousel {...settings}>
-      {cases.map((item) => (
-        <div className={styles.case} key={item.title}>
-          {/* <img src={item.image} alt={item.title} /> */}
-          <a href={item.link} target="_blank" rel="noopener noreferrer">
+      {cases.map(({ title, link, tags, description }) => (
+        <div className={styles.case} key={title}>
+          {/* <img src={image} alt={title} /> */}
+          <a href={link.site} target="_blank" rel="noopener noreferrer">
             <Image
-              alt="teste"
+              alt="Texto alt da imagem"
               src={`/images/case.png`}
               width={562}
               height={478}
             />
           </a>
           <div className={styles.case__infos}>
-            <h2 className={styles.case__title}>{item.title}</h2>
-            <p className={styles.case__tags}>{item.tags}</p>
-            <p className={styles.case__description}>{item.description}</p>
-            <a
-              className={styles.case__link}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver Projeto
-            </a>
+            <h2 className={styles.case__title}>{title}</h2>
+            <p className={styles.case__tags}>{tags}</p>
+            <p className={styles.case__description}>{description}</p>
+            <Link className={styles.case__link} href={link.site}>
+              site
+            </Link>
+            {link.github && (
+              <Link className={styles.case__link} href={link.github}>
+                github
+              </Link>
+            )}
           </div>
         </div>
       ))}

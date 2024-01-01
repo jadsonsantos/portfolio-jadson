@@ -16,6 +16,13 @@
     margin: 24px 0;
   }
 
+  &__link {
+    &:not(:first-of-type):before {
+      content: '.';
+      margin: 0 5px;
+    }
+  }
+
   @media (min-width: 1366px) {
     display: flex !important;
     gap: 135px;
