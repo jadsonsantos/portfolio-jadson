@@ -34,14 +34,14 @@ const Case: React.FC<CaseProps> = ({ cases }: CaseProps) => {
       {cases.map(({ title, link, tags, description }) => (
         <div className={styles.case} key={title}>
           {/* <img src={image} alt={title} /> */}
-          <a href={link.site} target="_blank" rel="noopener noreferrer">
+          <Link href={link.site}>
             <Image
               alt="Texto alt da imagem"
               src={`/images/case.png`}
               width={562}
               height={478}
             />
-          </a>
+          </Link>
           <div className={styles.case__infos}>
             <h2 className={styles.case__title}>{title}</h2>
             <p className={styles.case__tags}>{tags}</p>
