@@ -47,7 +47,7 @@ const Case: React.FC<CaseProps> = ({ cases }: CaseProps) => {
             <p className={styles.case__tags}>{tags}</p>
             <p className={styles.case__description}>{description}</p>
             <Link className={styles.case__link} href={link.site}>
-              site
+              acesse o projeto
             </Link>
             {link.github && (
               <Link className={styles.case__link} href={link.github}>

@@ -1,7 +1,7 @@
 const cases = [
   {
     image: 'case',
-    tags: 'html5 . css3 . nextjs',
+    tags: 'html5 . css3 . sass . nextjs',
     title: 'Portfólio da Thalita Torres',
     link: { site: 'https://thalitatorres.com.br/' },
     description:
