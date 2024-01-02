@@ -6,9 +6,6 @@ const menu = [
   {
     title: 'Projetos',
     link: '#cases'
-  },
-  {
-    title: 'Contato'
   }
 ]
 
