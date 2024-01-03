@@ -20,7 +20,9 @@ const About = () => {
           <Heading>Quem sou eu</Heading>
           <Typography className={styles.about__text}>{data.about}</Typography>
           <Typography>
-            <Link href="/cv.pdf">Acesse meu currículo</Link>
+            <Link href="/cv.pdf" target="_blank">
+              Acesse meu currículo
+            </Link>
           </Typography>
           <div className={styles.about__social}>
             {data.socialLinks.map(({ link, title }) => (
