@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import Link from 'components/Link'
+import CustomLink from 'components/CustomLink'
 import Carousel from 'components/Slider'
 
 import styles from './Case.module.scss'
@@ -34,25 +34,25 @@ const Case: React.FC<CaseProps> = ({ cases }: CaseProps) => {
       {cases.map(({ title, link, tags, description }) => (
         <div className={styles.case} key={title}>
           {/* <img src={image} alt={title} /> */}
-          <Link href={link.site}>
+          <CustomLink href={link.site}>
             <Image
               alt="Texto alt da imagem"
               src={`/images/case.png`}
               width={562}
               height={478}
             />
-          </Link>
+          </CustomLink>
           <div className={styles.case__infos}>
             <h2 className={styles.case__title}>{title}</h2>
             <p className={styles.case__tags}>{tags}</p>
             <p className={styles.case__description}>{description}</p>
-            <Link className={styles.case__link} href={link.site}>
+            <CustomLink className={styles.case__link} href={link.site}>
               acesse o projeto
-            </Link>
+            </CustomLink>
             {link.github && (
-              <Link className={styles.case__link} href={link.github}>
+              <CustomLink className={styles.case__link} href={link.github}>
                 github
-              </Link>
+              </CustomLink>
             )}
           </div>
         </div>
