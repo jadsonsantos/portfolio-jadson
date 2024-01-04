@@ -4,13 +4,14 @@ html {
 
 body {
   font-family: var(--font-primary);
+  background: linear-gradient(183deg, #0a2b4e 19.54%, #39b989 113.36%) no-repeat;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 24px;
 
-  @media(min-width: 1536px) {
+  @media (min-width: 1536px) {
     max-width: 1258px;
   }
 }
