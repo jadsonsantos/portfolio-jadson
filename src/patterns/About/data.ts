@@ -2,12 +2,12 @@ const skills = [
   {
     title: 'Linguagens:',
     content:
-      'HTML5, Pug.js, CSS3, Sass, JavaScript, TypeScript, ReactJs, NextJs, VTEX CMS'
+      'HTML5, Pug.js, CSS3, Sass, Styled Components, JavaScript, TypeScript, ReactJs, NextJs, VTEX CMS'
   },
   {
     title: 'Dev Tools:',
     content:
-      'VS Code, Bootstrap, Github, Bitbucket, Git, New Relic, Jest, Cypress'
+      'VS Code, Bootstrap, Git, Github, Bitbucket, New Relic, Jest, Cypress'
   }
 ]
 
