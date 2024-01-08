@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 import Container from 'components/Container'
 import CustomLink from 'components/CustomLink'
@@ -19,11 +18,11 @@ const About = () => {
         <div className={styles.about__infos}>
           <Heading>Quem sou eu</Heading>
           <Typography className={styles.about__text}>{data.about}</Typography>
-          <Typography>
+          {/* <Typography>
             <Link href="/cv-pt.pdf" target="_blank">
               Acesse meu currículo
             </Link>
-          </Typography>
+          </Typography> */}
           <div className={styles.about__social}>
             {data.socialLinks.map(({ link, title }) => (
               <CustomLink href={link} target="_blank" key={title}>
