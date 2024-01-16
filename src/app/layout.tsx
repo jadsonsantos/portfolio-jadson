@@ -8,6 +8,7 @@ import '../styles/base.scss'
 import { roboto, inter } from '../styles/fonts'
 
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   title: 'Jadson Santos',
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${roboto.variable}`}>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
