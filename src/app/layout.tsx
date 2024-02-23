@@ -12,7 +12,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   title: 'Jadson Santos',
-  description: 'Front End Developer'
+  description:
+    'Desenvolvedor Front-End apaixonado por criar experiências web excepcionais que sejam rápidas e responsivas.'
 }
 
 export default function RootLayout({
