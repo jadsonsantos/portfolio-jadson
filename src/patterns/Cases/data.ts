@@ -1,6 +1,6 @@
 const cases = [
   {
-    image: 'case',
+    image: 'case-thalita',
     tags: 'html5 . css3 . sass . nextjs',
     title: 'Portfólio da Thalita Torres',
     link: { site: 'https://thalitatorres.com.br/' },
@@ -8,7 +8,7 @@ const cases = [
       'Este projeto visava destacar as habilidades, projetos e experiências da talentosa designer de produto Thalita Torres.'
   },
   {
-    image: 'shopping-cart',
+    image: '',
     tags: 'html5 . css3 . javascript . reactjs',
     title: 'Carrinho de Compras',
     link: {
@@ -19,7 +19,7 @@ const cases = [
       'Carrinho de compras com recursos como listagem de produtos, busca de produtos via API do Mercado Livre, adição e remoção de produtos do carrinho.'
   },
   {
-    image: 'prime-flix',
+    image: '',
     tags: 'html5 . css3 . reactjs',
     title: 'Filmaria com ReactJS',
     link: {

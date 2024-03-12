@@ -1,12 +1,10 @@
 import Image from 'next/image'
-import React from 'react'
 
 import CustomLink from 'components/CustomLink'
-import Carousel from 'components/Slider'
 
 import styles from './Case.module.scss'
 
-interface Case {
+interface CaseItem {
   image: string
   tags: string
   title: string
@@ -20,44 +18,36 @@ interface Link {
 }
 
 interface CaseProps {
-  cases: Case[]
+  case: CaseItem
 }
 
-const settings = {
-  slidesToShow: 1,
-  arrows: false
-}
+const Case = ({ case: caseItem }: CaseProps) => {
+  const { title, link, image, tags, description } = caseItem
 
-const Case: React.FC<CaseProps> = ({ cases }: CaseProps) => {
   return (
-    <Carousel {...settings}>
-      {cases.map(({ title, link, tags, description }) => (
-        <div className={styles.case} key={title}>
-          {/* <img src={image} alt={title} /> */}
-          <CustomLink href={link.site}>
-            <Image
-              alt="Texto alt da imagem"
-              src={`/images/case.png`}
-              width={562}
-              height={478}
-            />
+    <div className={styles.case} key={title}>
+      <CustomLink href={link.site}>
+        <Image
+          alt={title}
+          src={image.length > 0 ? `/images/${image}.jpg` : `/images/case.png`}
+          width={562}
+          height={478}
+        />
+      </CustomLink>
+      <div className={styles.case__infos}>
+        <h2 className={styles.case__title}>{title}</h2>
+        <p className={styles.case__tags}>{tags}</p>
+        <p className={styles.case__description}>{description}</p>
+        <CustomLink className={styles.case__link} href={link.site}>
+          acesse o projeto
+        </CustomLink>
+        {link.github && (
+          <CustomLink className={styles.case__link} href={link.github}>
+            github
           </CustomLink>
-          <div className={styles.case__infos}>
-            <h2 className={styles.case__title}>{title}</h2>
-            <p className={styles.case__tags}>{tags}</p>
-            <p className={styles.case__description}>{description}</p>
-            <CustomLink className={styles.case__link} href={link.site}>
-              acesse o projeto
-            </CustomLink>
-            {link.github && (
-              <CustomLink className={styles.case__link} href={link.github}>
-                github
-              </CustomLink>
-            )}
-          </div>
-        </div>
-      ))}
-    </Carousel>
+        )}
+      </div>
+    </div>
   )
 }
 
