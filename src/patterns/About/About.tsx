@@ -25,9 +25,9 @@ const About = () => {
           </Typography> */}
           <div className={styles.about__social}>
             {data.socialLinks.map(({ link, title }) => (
-              <CustomLink href={link} target="_blank" key={title}>
+              <CustomLink href={link} key={title}>
                 <Image
-                  src={`images/${title}.svg`}
+                  src={`icons/${title}.svg`}
                   width={28}
                   height={28}
                   alt={`Ícone do ${title}`}
@@ -39,8 +39,7 @@ const About = () => {
         <Image src={aboutImage} alt="Imagem da seção sobre" />
         <div className={styles.about__skills}>
           {data.skills.map((skill) => {
-            const { title, content } = skill
-            return <Skill key={skill.title} title={title} content={content} />
+            return <Skill key={skill.title} skill={skill} />
           })}
         </div>
       </Container>

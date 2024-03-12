@@ -23,6 +23,10 @@ const socialLinks = [
   {
     link: 'https://www.instagram.com/eujadsonsantos/',
     title: 'instagram'
+  },
+  {
+    link: 'https://wa.me/5521999577807',
+    title: 'whatsapp'
   }
 ]
 
