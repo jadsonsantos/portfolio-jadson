@@ -25,7 +25,7 @@ const socialLinks = [
     title: 'instagram'
   },
   {
-    link: process.env.WHATSAPP_URL,
+    link: `${process.env.WHATSAPP_URL}`,
     title: 'whatsapp'
   }
 ]
