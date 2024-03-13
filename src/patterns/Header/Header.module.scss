@@ -5,6 +5,7 @@
   &__nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__menu {
@@ -15,7 +16,7 @@
   }
 
   &__item {
-    color: #FFF;
+    color: #fff;
     font-size: 18px;
     font-weight: 400;
     font-family: var(--font-secondary);
