@@ -12,12 +12,14 @@ import ContactImage from '../../../public/images/contact-illustration.svg'
 
 const Contact = () => {
   return (
-    <section className={styles.contact}>
+    <section className={styles.contact} id="contact">
       <Container className={styles.contact__container}>
         <article className={styles.contact__infos}>
           <Heading>Contato</Heading>
           <Typography className={styles.contact__paragraph}>
-            Interessado em criar um projeto? Entre em contato comigo.
+            Interessado em iniciar um projeto?
+            <br />
+            Entre em contato comigo.
           </Typography>
           <Button>
             <CustomLink href={process.env.WHATSAPP_URL!}>
