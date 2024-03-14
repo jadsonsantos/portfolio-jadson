@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+
+  &__item {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--font-secondary);
+    line-height: 28px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
