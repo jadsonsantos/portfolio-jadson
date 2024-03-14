@@ -1,6 +1,4 @@
-import React from 'react'
-
-import styles from '../../patterns/Header/Header.module.scss'
+import styles from './Menu.module.scss'
 
 interface MenuItem {
   title: string
@@ -12,9 +10,9 @@ interface MenuProps {
 }
 
 const Menu = ({ menuItems }: MenuProps) => (
-  <ul className={styles.header__menu}>
+  <ul className={styles.menu}>
     {menuItems.map(({ title, link }) => (
-      <li key={title} className={styles.header__item}>
+      <li key={title} className={styles.menu__item}>
         <a href={link}>{title}</a>
       </li>
     ))}
