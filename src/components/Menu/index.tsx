@@ -1,17 +1,10 @@
 import styles from './Menu.module.scss'
 
-interface MenuItem {
-  title: string
-  link?: string
-}
+import { menu } from './data'
 
-interface MenuProps {
-  menuItems: MenuItem[]
-}
-
-const Menu = ({ menuItems }: MenuProps) => (
+const Menu = () => (
   <ul className={styles.menu}>
-    {menuItems.map(({ title, link }) => (
+    {menu.map(({ title, link }) => (
       <li key={title} className={styles.menu__item}>
         <a href={link}>{title}</a>
       </li>
