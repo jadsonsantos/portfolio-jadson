@@ -1,50 +1,19 @@
-import Image from 'next/image'
-
 import Container from 'components/Container'
-import CustomLink from 'components/CustomLink'
-import Heading from 'components/foundation/Heading'
-import Typography from 'components/foundation/Typography'
-import Skill from 'components/Skill'
 
 import styles from './About.module.scss'
 
-import aboutImage from '../../../public/images/about.svg'
-import data from './data'
+import { About } from './index'
 
-const About = () => {
+const AboutComponent = () => {
   return (
     <section className={styles.about} id="about">
       <Container className={styles.about__container}>
-        <div className={styles.about__infos}>
-          <Heading>Quem sou eu</Heading>
-          <Typography className={styles.about__text}>{data.about}</Typography>
-          {/* <Typography>
-            <Link href="/cv-pt.pdf" target="_blank">
-              Acesse meu currículo
-            </Link>
-          </Typography> */}
-          <div className={styles.about__social}>
-            {data.socialLinks.map(({ link, title }) => (
-              <CustomLink href={link} key={title}>
-                <Image
-                  src={`icons/${title}.svg`}
-                  width={28}
-                  height={28}
-                  alt={`Ícone do ${title}`}
-                />
-              </CustomLink>
-            ))}
-          </div>
-        </div>
-        <Image src={aboutImage} alt="Imagem da seção sobre" />
-        <div className={styles.about__skills}>
-          {data.skills.map((skill) => {
-            return <Skill key={skill.title} skill={skill} />
-          })}
-        </div>
+        <About.Infos />
+        <About.Illustration />
+        <About.Skills />
       </Container>
     </section>
   )
 }
 
-export default About
+export default AboutComponent
