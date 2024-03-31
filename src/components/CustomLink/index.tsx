@@ -1,22 +1,19 @@
-type LinkProps = {
-  children: React.ReactNode
-  href: string
+import React from 'react'
+
+type CustomLinkProps = React.ComponentProps<'a'> & {
   target?: string
-  className?: string
 }
 
 const CustomLink = ({
   children,
-  href,
   target = '_blank',
-  className
-}: LinkProps) => {
+  ...rest
+}: CustomLinkProps) => {
   return (
     <a
-      className={className}
-      href={href}
       target={target}
       rel={target === '_blank' ? 'noopener noreferrer' : ''}
+      {...rest}
     >
       {children}
     </a>

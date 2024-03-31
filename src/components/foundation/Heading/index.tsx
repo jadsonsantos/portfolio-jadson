@@ -1,9 +1,10 @@
-type Props = {
-  children: string
-  className?: React.ReactNode
+import React from 'react'
+
+type HeadingProps = React.ComponentProps<'h2'> & {
+  className?: string
 }
 
-const Heading = ({ children, className }: Props) => {
+const Heading = ({ children, className }: HeadingProps) => {
   return <h2 className={`heading ${className || ''}`}>{children}</h2>
 }
 
