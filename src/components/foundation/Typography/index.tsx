@@ -1,9 +1,10 @@
-type Props = {
-  children: React.ReactNode
+import React from 'react'
+
+type TypographyProps = React.ComponentProps<'p'> & {
   className?: React.ReactNode
 }
 
-const Typography = ({ className, children }: Props) => {
+const Typography = ({ className, children }: TypographyProps) => {
   return <p className={`typography ${className || ''}`}>{children}</p>
 }
 
