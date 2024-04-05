@@ -26,12 +26,13 @@ const Case = ({ case: caseItem }: CaseProps) => {
 
   return (
     <div className={styles.case} key={title}>
-      <CustomLink href={link.site}>
+      <CustomLink href={link.site} className={styles.case__image}>
         <Image
           alt={title}
-          src={image.length > 0 ? `/images/${image}.jpg` : `/images/case.png`}
-          width={562}
-          height={478}
+          src={image.length > 0 ? `/images/${image}` : `/images/case.png`}
+          width={454}
+          height={403}
+          className={styles.case__imageTag}
         />
       </CustomLink>
       <div className={styles.case__infos}>
