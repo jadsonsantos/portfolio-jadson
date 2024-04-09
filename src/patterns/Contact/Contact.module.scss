@@ -16,10 +16,16 @@
     margin-bottom: 32px;
   }
 
-  @media (min-width: 1366px) {
+  @media (min-width: 768px) {
     &__container {
       flex-direction: row;
       align-items: center;
+      gap: 0;
+    }
+  }
+
+  @media (min-width: 1366px) {
+    &__container {
       gap: 185px;
     }
   }
