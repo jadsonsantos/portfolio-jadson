@@ -21,10 +21,6 @@ const socialLinks = [
     title: 'github'
   },
   {
-    link: 'https://www.instagram.com/eujadsonsantos/',
-    title: 'instagram'
-  },
-  {
     link: `${process.env.WHATSAPP_URL}`,
     title: 'whatsapp'
   }
