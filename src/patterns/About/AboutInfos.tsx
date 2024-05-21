@@ -3,17 +3,26 @@ import Typography from 'components/foundation/Typography'
 
 import styles from './About.module.scss'
 
-import AboutSocial from './AboutSocial'
-import data from './data'
+import { ProfileType } from 'types'
 
-const AboutInfos = () => {
+import { getProfile } from '../../../sanity/lib/sanity.query'
+import AboutSocial from './AboutSocial'
+
+import { PortableText } from '@portabletext/react'
+
+export default async function AboutInfos() {
+  const profile: ProfileType[] = await getProfile()
+
   return (
     <div className={styles.about__infos}>
       <Heading>Quem sou eu</Heading>
-      <Typography className={styles.about__text}>{data.about}</Typography>
+      {profile &&
+        profile.map((data) => (
+          <Typography className={styles.about__text} key={data._id}>
+            <PortableText value={data.fullBio} />
+          </Typography>
+        ))}
       <AboutSocial />
     </div>
   )
 }
-
-export default AboutInfos

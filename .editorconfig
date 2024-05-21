@@ -3,3 +3,4 @@ root = true
 
 [*]
 max_line_length = 80
+end_of_line = lf
