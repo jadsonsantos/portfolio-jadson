@@ -5,10 +5,10 @@ import styles from './About.module.scss'
 
 import { ProfileType } from 'types'
 
-import { getProfile } from '../../../sanity/lib/sanity.query'
 import AboutSocial from './AboutSocial'
 
 import { PortableText } from '@portabletext/react'
+import { getProfile } from 'sanity/lib/sanity.query'
 
 export default async function AboutInfos() {
   const profile: ProfileType[] = await getProfile()

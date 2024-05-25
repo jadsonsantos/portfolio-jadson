@@ -8,7 +8,7 @@ import Typography from 'components/foundation/Typography'
 
 import styles from './Contact.module.scss'
 
-import ContactImage from '../../../public/images/contact-illustration.svg'
+import ContactImage from 'public/images/contact-illustration.svg'
 
 const Contact = () => {
   return (

@@ -4,7 +4,7 @@ import CustomLink from 'components/CustomLink'
 
 import styles from './About.module.scss'
 
-import data from './data'
+import * as data from './data'
 
 const AboutSocial = () => {
   return (

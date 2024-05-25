@@ -28,4 +28,4 @@ const socialLinks = [
 
 const about = `Desenvolvedor Front-End graduado em Ciência da Computação, dedicado à criação de websites responsivos, otimizados para performance e SEO, visando alcançar alta visibilidade nos mecanismos de busca.`
 
-export default { skills, socialLinks, about }
+export { skills, socialLinks, about }
