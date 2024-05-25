@@ -1,14 +1,11 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
-import '../styles/base.scss'
-
-// import Analytics from 'components/Analytics'
-
-import { roboto, inter } from '../styles/fonts'
+import 'styles/base.scss'
 
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { roboto, inter } from 'styles/fonts'
 
 export const metadata: Metadata = {
   title: 'Jadson Santos',

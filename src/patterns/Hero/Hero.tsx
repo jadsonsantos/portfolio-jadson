@@ -9,10 +9,10 @@ import styles from './Hero.module.scss'
 
 import { ProfileType } from 'types'
 
-import profilePicture from '../../../public/images/about.svg'
-import heroArrow from '../../../public/images/hero-arrow.svg'
-import heroIllustration from '../../../public/images/hero-illustration-1.svg'
-import { getProfile } from '../../../sanity/lib/sanity.query'
+import profilePicture from 'public/images/about.svg'
+import heroArrow from 'public/images/hero-arrow.svg'
+import heroIllustration from 'public/images/hero-illustration-1.svg'
+import { getProfile } from 'sanity/lib/sanity.query'
 
 const Hero = async () => {
   const profile = await getProfile()
