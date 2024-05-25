@@ -2,7 +2,7 @@ import Skill from 'components/Skill'
 
 import styles from './About.module.scss'
 
-import data from './data'
+import * as data from './data'
 
 const AboutSkills = () => {
   return (
