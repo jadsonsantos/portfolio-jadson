@@ -18,7 +18,7 @@ export default async function AboutInfos() {
       <Heading>Quem sou eu</Heading>
       {profile &&
         profile.map((data) => (
-          <Typography className={styles.about__text} key={data._id}>
+          <Typography className={styles.about__text} key={data._id} as="div">
             <PortableText value={data.fullBio} />
           </Typography>
         ))}
