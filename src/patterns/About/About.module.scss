@@ -30,12 +30,18 @@
 
   @media (min-width: 1024px) {
     &__container {
-      gap: 200px;
+      gap: 60px;
     }
 
     &__skills {
       flex-direction: row;
       justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 1366px) {
+    &__container {
+      gap: 200px;
     }
   }
 }
