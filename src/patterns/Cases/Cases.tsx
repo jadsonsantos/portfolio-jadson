@@ -10,7 +10,7 @@ import cases from './data'
 
 const settings = {
   slidesToShow: 1,
-  arrows: false
+  arrows: true
 }
 
 const Cases: React.FC = () => {
@@ -21,9 +21,11 @@ const Cases: React.FC = () => {
         <Typography>Conheça alguns dos projetos que desenvolvi</Typography>
         <section className={styles.cases__list}>
           <Carousel {...settings}>
-            {cases.map((item) => {
-              return <Case key={item.title} case={item} />
-            })}
+            {cases
+              .filter((item) => item.isActive)
+              .map((item) => {
+                return <Case key={item.title} case={item} />
+              })}
           </Carousel>
         </section>
       </Container>
