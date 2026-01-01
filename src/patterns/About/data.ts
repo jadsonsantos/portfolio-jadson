@@ -1,31 +1,75 @@
-const skills = [
-  {
-    title: 'Linguagens:',
-    content:
-      'HTML5, Pug.js, CSS3, Sass, Styled Components, JavaScript, TypeScript, ReactJs, NextJs, VTEX CMS'
-  },
-  {
-    title: 'Dev Tools:',
-    content:
-      'VS Code, Bootstrap, Git, Github, Bitbucket, New Relic, Jest, Cypress'
-  }
+import { profile } from 'config/profile'
+
+const languages = [
+  'HTML5',
+  'CSS3',
+  'Sass',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'VTEX',
+  'Tailwind CSS',
+  'Next.js'
+]
+
+const tools = [
+  'VS Code',
+  'Cursor',
+  'Git',
+  'GitHub',
+  'Figma',
+  'Webpack',
+  'Gulp',
+  'Playwright',
+  'Metodologias Ágeis'
 ]
 
 const socialLinks = [
   {
-    link: 'https://www.linkedin.com/in/jadsonsantos/',
-    title: 'linkedin'
+    link: profile.social.github,
+    title: 'github',
+    icon: 'Github'
   },
   {
-    link: 'https://github.com/jadsonsantos/',
-    title: 'github'
+    link: profile.social.linkedin,
+    title: 'linkedin',
+    icon: 'Linkedin'
   },
   {
-    link: `${process.env.WHATSAPP_URL}`,
-    title: 'whatsapp'
+    link: `mailto:${profile.email}`,
+    title: 'email',
+    icon: 'Mail'
   }
 ]
 
-const about = `Desenvolvedor Front-End graduado em Ciência da Computação, dedicado à criação de websites responsivos, otimizados para performance e SEO, visando alcançar alta visibilidade nos mecanismos de busca.`
+const experiences = [
+  {
+    id: 1,
+    title: 'Desenvolvedor Front-End',
+    company: 'Avanti',
+    period: '2024 - Presente',
+    description:
+      'Desenvolvimento e manutenção de aplicações front-end para e-commerces VTEX, com foco em performance e experiência do usuário.',
+    technologies: ['Reactjs', 'Typescript', 'VTEX']
+  },
+  {
+    id: 2,
+    title: 'Desenvolvedor Front-End',
+    company: 'Red Ventures',
+    period: '2021 - 2023',
+    description:
+      'Atuação em múltiplos projetos front-end, com foco em componentes reutilizáveis, design system e boas práticas de UI.',
+    technologies: ['Reactjs', 'Typescript', 'Design System']
+  },
+  {
+    id: 3,
+    title: 'Desenvolvedor Front-End',
+    company: 'Agência e-Can',
+    period: '2019 - 2021',
+    description:
+      'Desenvolvimento de interfaces web e mobile, com foco em front-end e base sólida em tecnologias web.',
+    technologies: ['VTEX', 'Javascript', 'HTML5', 'Sass']
+  }
+]
 
-export { skills, socialLinks, about }
+export { experiences, languages, socialLinks, tools }
