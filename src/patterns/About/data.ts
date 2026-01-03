@@ -1,4 +1,5 @@
 import { profile } from 'config/profile'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 const languages = [
   'HTML5',
@@ -26,19 +27,19 @@ const tools = [
 
 const socialLinks = [
   {
-    link: profile.social.github,
-    title: 'github',
-    icon: 'Github'
+    icon: Github,
+    href: profile.social.github,
+    label: 'Github'
   },
   {
-    link: profile.social.linkedin,
-    title: 'linkedin',
-    icon: 'Linkedin'
+    icon: Linkedin,
+    href: profile.social.linkedin,
+    label: 'LinkedIn'
   },
   {
-    link: `mailto:${profile.email}`,
-    title: 'email',
-    icon: 'Mail'
+    icon: Mail,
+    href: `mailto:${profile.email}`,
+    label: 'Email'
   }
 ]
 

@@ -2,20 +2,16 @@ import Link from 'next/link'
 
 import Container from 'components/Container'
 import Logo from 'components/Logo'
+import SocialLinks from 'components/SocialLinks'
+
+import { socialLinks } from 'patterns/About/data'
 
 import styles from './Footer.module.scss'
 
 import { navigation, profile } from 'config/profile'
-import { Github, Linkedin, Mail } from 'lucide-react'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-
-  const social = [
-    { icon: Github, href: profile.social.github, label: 'Github' },
-    { icon: Linkedin, href: profile.social.linkedin, label: 'LinkedIn' },
-    { icon: Mail, href: `mailto:${profile.email}`, label: 'Email' }
-  ]
 
   return (
     <footer className={styles.footer}>
@@ -44,19 +40,11 @@ const Footer = () => {
 
             <div className={styles.footer__column}>
               <h4 className={styles.footer__columnTitle}>Social</h4>
-              <div className={styles.footer__social}>
-                {social.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    className={styles.footer__socialLink}
-                    aria-label={item.label}
-                  >
-                    <item.icon size={20} />
-                  </Link>
-                ))}
-              </div>
+              <SocialLinks
+                links={socialLinks}
+                containerClassName={styles.footer__social}
+                linkClassName={styles.footer__socialLink}
+              />
             </div>
           </div>
         </div>

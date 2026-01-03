@@ -1,23 +1,11 @@
-import Link from 'next/link'
-
 import Container from 'components/Container'
+import SocialLinks from 'components/SocialLinks'
 
 import styles from './About.module.scss'
 
 import { languages, socialLinks, tools } from './data'
 
-import { Github, Linkedin, Mail } from 'lucide-react'
-
 const AboutComponent = () => {
-  const getIcon = (iconName: string) => {
-    const icons: Record<string, React.ReactNode> = {
-      Github: <Github size={20} />,
-      Linkedin: <Linkedin size={20} />,
-      Mail: <Mail size={20} />
-    }
-    return icons[iconName] || null
-  }
-
   return (
     <section className={styles.about} id="about">
       <Container className={styles.about__container}>
@@ -33,19 +21,11 @@ const AboutComponent = () => {
             e-commerces, sempre com atenção à performance, usabilidade e
             necessidades reais do negócio.
           </p>
-          <div className={styles.about__social}>
-            {socialLinks.map((item) => (
-              <Link
-                key={item.title}
-                href={item.link}
-                target="_blank"
-                className={styles.about__socialLink}
-                aria-label={item.title}
-              >
-                {getIcon(item.icon)}
-              </Link>
-            ))}
-          </div>
+          <SocialLinks
+            links={socialLinks}
+            containerClassName={styles.about__social}
+            linkClassName={styles.about__socialLink}
+          />
         </div>
 
         <div className={styles.about__right}>

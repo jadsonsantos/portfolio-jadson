@@ -3,11 +3,13 @@
 import Link from 'next/link'
 
 import Container from 'components/Container'
+import SocialLinks from 'components/SocialLinks'
+
+import { socialLinks } from 'patterns/About/data'
 
 import styles from './Hero.module.scss'
 
 import { profile } from 'config/profile'
-import { Github, Linkedin, Mail } from 'lucide-react'
 
 const Hero = () => {
   return (
@@ -75,25 +77,10 @@ const Hero = () => {
             <span className={styles.hero__cardRole}>{profile.role}</span>
           </div>
 
-          <div className={styles.hero__socialSide}>
-            <Link
-              href={profile.social.github}
-              target="_blank"
-              aria-label="Github"
-            >
-              <Github size={20} />
-            </Link>
-            <Link
-              href={profile.social.linkedin}
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </Link>
-            <Link href={`mailto:${profile.email}`} aria-label="Email">
-              <Mail size={20} />
-            </Link>
-          </div>
+          <SocialLinks
+            links={socialLinks}
+            containerClassName={styles.hero__socialSide}
+          />
         </div>
       </Container>
     </section>
