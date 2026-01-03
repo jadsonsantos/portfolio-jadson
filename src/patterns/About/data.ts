@@ -1,31 +1,46 @@
-const skills = [
-  {
-    title: 'Linguagens:',
-    content:
-      'HTML5, Pug.js, CSS3, Sass, Styled Components, JavaScript, TypeScript, ReactJs, NextJs, VTEX CMS'
-  },
-  {
-    title: 'Dev Tools:',
-    content:
-      'VS Code, Bootstrap, Git, Github, Bitbucket, New Relic, Jest, Cypress'
-  }
+import { profile } from 'config/profile'
+import { Github, Linkedin, Mail } from 'lucide-react'
+
+const languages = [
+  'HTML5',
+  'CSS3',
+  'Sass',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'VTEX',
+  'Tailwind CSS',
+  'Next.js'
+]
+
+const tools = [
+  'VS Code',
+  'Cursor',
+  'Git',
+  'GitHub',
+  'Figma',
+  'Webpack',
+  'Gulp',
+  'Playwright',
+  'Metodologias Ágeis'
 ]
 
 const socialLinks = [
   {
-    link: 'https://www.linkedin.com/in/jadsonsantos/',
-    title: 'linkedin'
+    icon: Github,
+    href: profile.social.github,
+    label: 'Github'
   },
   {
-    link: 'https://github.com/jadsonsantos/',
-    title: 'github'
+    icon: Linkedin,
+    href: profile.social.linkedin,
+    label: 'LinkedIn'
   },
   {
-    link: `${process.env.WHATSAPP_URL}`,
-    title: 'whatsapp'
+    icon: Mail,
+    href: `mailto:${profile.email}`,
+    label: 'Email'
   }
 ]
 
-const about = `Desenvolvedor Front-End graduado em Ciência da Computação, dedicado à criação de websites responsivos, otimizados para performance e SEO, visando alcançar alta visibilidade nos mecanismos de busca.`
-
-export { skills, socialLinks, about }
+export { languages, socialLinks, tools }

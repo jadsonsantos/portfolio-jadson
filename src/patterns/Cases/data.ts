@@ -1,60 +1,93 @@
-const cases = [
+enum Category {
+  Todos = 'Todos',
+  Websites = 'Websites',
+  Portfólios = 'Portfólios',
+  Ecommerce = 'Ecommerce'
+}
+
+export type ProjectType = {
+  id: number
+  image: string
+  title: string
+  description: string
+  tags: string[]
+  category: Category
+  links: {
+    site?: string
+    github?: string
+  }
+  isActive: boolean
+}
+
+const projects: ProjectType[] = [
   {
+    id: 1,
     image: 'case-harpa.png',
-    tags: 'vivusjs . swiperjs . styled components . nextjs . reactjs',
-    title: 'Harpá',
-    isActive: true,
-    link: {
+    title: 'Harpa - Agência de Expedições',
+    description:
+      'Site institucional para agência de expedições, com layouts responsivos, UX orientado à apresentação de pacotes turísticos e foco em performance e navegabilidade.',
+    tags: ['Next.js', 'TypeScript', 'Styled Components'],
+    category: Category.Websites,
+    links: {
       site: 'https://harpa.me'
     },
-    description:
-      'Site oficial da agência de expedições Harpá. Foi desenvolvido com NextJS, Styled Components, swiperjs e Vivusjs.'
+    isActive: true
   },
   {
+    id: 2,
     image: 'case-thalita.png',
-    tags: 'html5 . css3 . sass . nextjs . emailjs',
-    title: 'Thalita Torres',
-    isActive: true,
-    link: { site: 'https://thalitatorres.com.br/' },
+    title: 'Landing Page — Portfólio de Designer',
     description:
-      'Site pessoal de Thalita Torres. Foi desenvolvido com NextJS, Sass e EmailJS.'
+      'Landing page desenvolvida para portfólio profissional, com foco em conversão, animações sutis e boa experiência do usuário.',
+    tags: ['Next.js', 'Sass', 'CSS Animations'],
+    category: Category.Portfólios,
+    links: {
+      site: 'https://thalitatorres.com.br/'
+    },
+    isActive: true
   },
   {
-    image: 'case-mercadolivre.png',
-    tags: 'html5 . css3 . javascript . reactjs',
-    title: 'Carrinho de Compras',
-    isActive: false,
-    link: {
-      site: 'https://shopping-cart-nine-mu.vercel.app/',
-      github: 'https://github.com/jadsonsantos/shopping-cart'
-    },
+    id: 3,
+    image: 'case-ecommerce.png',
+    title: 'E-commerce Fashion',
     description:
-      'Aplicação que oferece uma experiência de compra personalizada, integrando-se à API do Mercado Livre para listar produtos, facilitando a busca e adição de itens ao carrinho de compras.'
+      'Plataforma de e-commerce com catálogo de produtos, carrinho inteligente e checkout otimizado.',
+    tags: ['Next.js', 'Stripe', 'Prisma'],
+    category: Category.Ecommerce,
+    links: {
+      site: 'https://fashion.example.com',
+      github: 'https://github.com/jadsonsantos/ecommerce'
+    },
+    isActive: false
   },
   {
-    image: 'case-primeflix.png',
-    tags: 'html5 . css3 . reactjs . typescript',
-    title: 'Aplicativo de Filmes',
-    isActive: false,
-    link: {
-      site: 'https://primeflix-psi.vercel.app/',
-      github: 'https://github.com/jadsonsantos/prime-flix'
-    },
+    id: 4,
+    image: 'case-fitness.png',
+    title: 'App Fitness Tracker',
     description:
-      'Plataforma interativa desenvolvida em ReactJS, que integra-se à API do The Movie DB para listar filmes, permitindo aos usuários adicionar e remover títulos da lista de favoritos com facilidade.'
+      'Aplicação web para monitoramento de atividades físicas com gráficos de progresso.',
+    tags: ['React Native', 'Firebase', 'GraphQL'],
+    category: Category.Ecommerce,
+    links: {
+      site: 'https://fitness.example.com',
+      github: 'https://github.com/jadsonsantos/fitness'
+    },
+    isActive: false
   },
   {
-    image: 'case-clubecommerce.png',
-    tags: 'styled components . reactjs . typescript . stripe . firebase',
-    title: 'E-commerce ReactJS',
-    isActive: false,
-    link: {
-      site: 'https://clubecommerce.jadsonsantos.dev.br/',
-      github: 'https://github.com/jadsonsantos/club-ecommerce-frontend'
-    },
+    id: 6,
+    image: 'case-portfolio.png',
+    title: 'Portfolio Designer 3D',
     description:
-      'Plataforma de e-commerce construída com ReactJS. Oferece listagem de produtos, gerenciamento de carrinho de compras, checkout seguro com Stripe, e autenticação via email/senha ou Google. Projetada para uma experiência de usuário fluida e segura.'
+      'Portfólio interativo com elementos 3D e transições em WebGL usando Three.js.',
+    tags: ['Three.js', 'React Three Fiber', 'GSAP'],
+    category: Category.Portfólios,
+    links: {
+      site: 'https://portfolio.example.com',
+      github: 'https://github.com/jadsonsantos/portfolio-3d'
+    },
+    isActive: false
   }
 ]
 
-export default cases
+export { Category, projects }

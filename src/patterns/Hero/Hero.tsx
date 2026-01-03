@@ -1,47 +1,87 @@
-import Image from 'next/image'
+'use client'
+
 import Link from 'next/link'
 
 import Container from 'components/Container'
-import Heading from 'components/foundation/Heading'
-import Typography from 'components/foundation/Typography'
+import SocialLinks from 'components/SocialLinks'
+
+import { socialLinks } from 'patterns/About/data'
 
 import styles from './Hero.module.scss'
 
-import { ProfileType } from 'types'
+import { profile } from 'config/profile'
 
-import profilePicture from 'public/images/about.svg'
-import heroArrow from 'public/images/hero-arrow.svg'
-import heroIllustration from 'public/images/hero-illustration-1.svg'
-import { getProfile } from 'sanity/lib/sanity.query'
-
-const Hero = async () => {
-  const profile = await getProfile()
-
+const Hero = () => {
   return (
     <section className={styles.hero}>
       <Container className={styles.hero__container}>
-        <div className={styles.hero__wrapper}>
-          {profile &&
-            profile.map((data: ProfileType) => (
-              <div className={styles.hero__infos} key={data._id}>
-                <Image
-                  src={heroIllustration}
-                  alt="Ilustração de uma barra"
-                  priority
-                />
-                <h4 className={styles.hero__presentation}>Olá, eu sou o</h4>
-                <Heading>{data.fullName}</Heading>
-                <Typography>
-                  Desenvolvedor Front-End apaixonado por criar experiências web
-                  excepcionais que sejam rápidas e responsivas.
-                </Typography>
-              </div>
-            ))}
-          <Image src={profilePicture} alt="Foto do Jadson" priority />
+        <div className={styles.hero__content}>
+          <div className={styles.hero__badge}>
+            <span className={styles.hero__badgeIcon}>★</span>
+            Front-End Developer
+          </div>
+
+          <h1 className={styles.hero__title}>
+            Desenvolvedor
+            <br />
+            <span className={styles.hero__highlight}>Front-End</span>
+            <br />
+          </h1>
+
+          <p className={styles.hero__description}>{profile.description.hero}</p>
+
+          <div className={styles.hero__buttons}>
+            <Link href="#cases" className={styles.hero__buttonPrimary}>
+              Conhecer projetos
+            </Link>
+            <Link href="#about" className={styles.hero__buttonOutline}>
+              Ver portfólio
+            </Link>
+          </div>
+
+          <div className={styles.hero__stats}>
+            <div className={styles.hero__stat}>
+              <span className={styles.hero__statNumber}>
+                {profile.stats.yearsExperience}
+              </span>
+              <span className={styles.hero__statLabel}>
+                Anos de experiência
+              </span>
+            </div>
+            <div className={styles.hero__stat}>
+              <span className={styles.hero__statNumber}>
+                {profile.stats.projectsCompleted}
+              </span>
+              <span className={styles.hero__statLabel}>
+                Projetos concluídos
+              </span>
+            </div>
+            <div className={styles.hero__stat}>
+              <span className={styles.hero__statNumber}>
+                {profile.stats.satisfiedClients}
+              </span>
+              <span className={styles.hero__statLabel}>
+                Lojas VTEX implementadas
+              </span>
+            </div>
+          </div>
         </div>
-        <Link className={styles.hero__arrow} href="#about">
-          <Image src={heroArrow} width={17} alt="Seta voltada para baixo" />
-        </Link>
+
+        <div className={styles.hero__cardWrapper}>
+          <div className={styles.hero__card}>
+            <div className={styles.hero__cardAvatar}>
+              <span className={styles.hero__cardInitial}>
+                {profile.initial}
+              </span>
+            </div>
+            <span className={styles.hero__cardRole}>{profile.role}</span>
+          </div>
+
+          <SocialLinks
+            links={socialLinks}
+            containerClassName={styles.hero__socialSide}
+          />
+        </div>
       </Container>
     </section>
   )

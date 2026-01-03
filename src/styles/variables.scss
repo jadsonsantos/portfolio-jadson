@@ -1,10 +1,32 @@
-$primary-color: #64ff00;
- 
+$primary-color: #14b8a6;
+$primary-dark: #0d9488;
+$primary-light: #5eead4;
+$background-dark: #0a0a0a;
+$background-card: #171717;
+$background-card-hover: #1f1f1f;
+$text-primary: #ffffff;
+$text-secondary: #a3a3a3;
+$text-muted: #737373;
+$border-color: #262626;
+
 :export {
   primaryColor: $primary-color;
+  primaryDark: $primary-dark;
+  backgroundDark: $background-dark;
+  backgroundCard: $background-card;
 }
 
 :root {
-  --font-primary: "Roboto, sans-serif";
-  --font-secondary: "Inter, sans-serif";
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  --primary-color: #{$primary-color};
+  --primary-dark: #{$primary-dark};
+  --primary-light: #{$primary-light};
+  --background-dark: #{$background-dark};
+  --background-card: #{$background-card};
+  --background-card-hover: #{$background-card-hover};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-muted: #{$text-muted};
+  --border-color: #{$border-color};
 }

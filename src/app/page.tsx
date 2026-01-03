@@ -1,6 +1,7 @@
 import About from 'patterns/About/About'
 import Cases from 'patterns/Cases/Cases'
 import Contact from 'patterns/Contact'
+import Experience from 'patterns/Experience/Experience'
 import Footer from 'patterns/Footer/Footer'
 import Header from 'patterns/Header/Header'
 import Hero from 'patterns/Hero/Hero'
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Experience />
         <Cases />
         <Contact />
       </main>
