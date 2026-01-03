@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Github, Linkedin, LucideIcon, Mail } from 'lucide-react'
+import { LucideIcon } from 'lucide-react'
 
 export type SocialLinkItem = {
   icon: LucideIcon | string
@@ -21,15 +21,7 @@ const SocialLinks = ({
   linkClassName,
   iconSize = 20
 }: SocialLinksProps) => {
-  const getIcon = (icon: LucideIcon | string) => {
-    if (typeof icon === 'string') {
-      const iconMap: Record<string, React.ReactNode> = {
-        Github: <Github size={iconSize} />,
-        Linkedin: <Linkedin size={iconSize} />,
-        Mail: <Mail size={iconSize} />
-      }
-      return iconMap[icon] || null
-    }
+  const getIcon = (icon: LucideIcon) => {
     const IconComponent = icon
     return <IconComponent size={iconSize} />
   }
@@ -46,7 +38,7 @@ const SocialLinks = ({
           title={item.label}
           rel="noopener noreferrer"
         >
-          {getIcon(item.icon)}
+          {getIcon(item.icon as LucideIcon)}
         </Link>
       ))}
     </div>
