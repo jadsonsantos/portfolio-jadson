@@ -22,7 +22,7 @@ export const profile = {
   stats: {
     yearsExperience: '5+',
     projectsCompleted: '8+',
-    satisfiedClients: '4+'
+    satisfiedClients: '6+'
   },
 
   // Descrições
