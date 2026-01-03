@@ -1,32 +1,115 @@
 .contact {
-  padding: 0 0 154px;
+  padding: 100px 0;
+  background-color: var(--background-card);
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 85px;
+    align-items: center;
+    text-align: center;
   }
 
-  &__infos {
-    max-width: 540px;
-    width: 100%;
+  &__header {
+    max-width: 500px;
+    margin-bottom: 48px;
   }
 
-  &__paragraph {
-    margin-bottom: 32px;
-  }
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 16px;
 
-  @media (min-width: 768px) {
-    &__container {
-      flex-direction: row;
-      align-items: center;
-      gap: 0;
+    @media (min-width: 768px) {
+      font-size: 40px;
     }
   }
 
-  @media (min-width: 1366px) {
-    &__container {
-      gap: 185px;
+  &__subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--primary-color);
+      transform: translateY(-4px);
+    }
+  }
+
+  &__cardIcon {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(20, 184, 166, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+  }
+
+  &__cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  &__cardValue {
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
     }
   }
 }
