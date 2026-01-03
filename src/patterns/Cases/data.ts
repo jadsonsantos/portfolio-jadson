@@ -1,60 +1,102 @@
-const cases = [
+export type ProjectType = {
+  id: number
+  image: string
+  title: string
+  description: string
+  tags: string[]
+  category: string
+  links: {
+    site?: string
+    github?: string
+  }
+  isActive: boolean
+}
+
+const projects: ProjectType[] = [
   {
+    id: 1,
     image: 'case-harpa.png',
-    tags: 'vivusjs . swiperjs . styled components . nextjs . reactjs',
-    title: 'Harpá',
-    isActive: true,
-    link: {
+    title: 'Harpa - Agência de Expedições',
+    description:
+      'Site institucional para agência de expedições, com layouts responsivos, UX orientado à apresentação de pacotes turísticos e foco em performance e navegabilidade.',
+    tags: ['Next.js', 'TypeScript', 'Styled Components'],
+    category: 'Websites',
+    links: {
       site: 'https://harpa.me'
     },
-    description:
-      'Site oficial da agência de expedições Harpá. Foi desenvolvido com NextJS, Styled Components, swiperjs e Vivusjs.'
+    isActive: true
   },
   {
+    id: 2,
+    image: 'case-dashboard.png',
+    title: 'SaaS Dashboard Enterprise',
+    description:
+      'Plataforma de análise de dados com charts interativos, relatórios em tempo real e integração com APIs.',
+    tags: ['React', 'TypeScript', 'Chart.js'],
+    category: 'SaaS',
+    links: {
+      site: 'https://dashboard.example.com'
+    },
+    isActive: true
+  },
+  {
+    id: 3,
+    image: 'case-ecommerce.png',
+    title: 'E-commerce Fashion',
+    description:
+      'Plataforma de e-commerce com catálogo de produtos, carrinho inteligente e checkout otimizado.',
+    tags: ['Next.js', 'Stripe', 'Prisma'],
+    category: 'E-commerce',
+    links: {
+      site: 'https://fashion.example.com',
+      github: 'https://github.com/jadsonsantos/ecommerce'
+    },
+    isActive: true
+  },
+  {
+    id: 4,
+    image: 'case-fitness.png',
+    title: 'App Fitness Tracker',
+    description:
+      'Aplicação web para monitoramento de atividades físicas com gráficos de progresso.',
+    tags: ['React Native', 'Firebase', 'GraphQL'],
+    category: 'Apps',
+    links: {
+      site: 'https://fitness.example.com',
+      github: 'https://github.com/jadsonsantos/fitness'
+    },
+    isActive: true
+  },
+  {
+    id: 5,
     image: 'case-thalita.png',
-    tags: 'html5 . css3 . sass . nextjs . emailjs',
-    title: 'Thalita Torres',
-    isActive: true,
-    link: { site: 'https://thalitatorres.com.br/' },
+    title: 'Landing Page SaaS',
     description:
-      'Site pessoal de Thalita Torres. Foi desenvolvido com NextJS, Sass e EmailJS.'
+      'Página de conversão de alta performance com animações, seções e integrações.',
+    tags: ['Next.js', 'Tailwind', 'Motion CSS'],
+    category: 'Portfolios',
+    links: {
+      site: 'https://thalitatorres.com.br/',
+      github: 'https://github.com/jadsonsantos/landing'
+    },
+    isActive: true
   },
   {
-    image: 'case-mercadolivre.png',
-    tags: 'html5 . css3 . javascript . reactjs',
-    title: 'Carrinho de Compras',
-    isActive: false,
-    link: {
-      site: 'https://shopping-cart-nine-mu.vercel.app/',
-      github: 'https://github.com/jadsonsantos/shopping-cart'
-    },
+    id: 6,
+    image: 'case-portfolio.png',
+    title: 'Portfolio Designer 3D',
     description:
-      'Aplicação que oferece uma experiência de compra personalizada, integrando-se à API do Mercado Livre para listar produtos, facilitando a busca e adição de itens ao carrinho de compras.'
-  },
-  {
-    image: 'case-primeflix.png',
-    tags: 'html5 . css3 . reactjs . typescript',
-    title: 'Aplicativo de Filmes',
-    isActive: false,
-    link: {
-      site: 'https://primeflix-psi.vercel.app/',
-      github: 'https://github.com/jadsonsantos/prime-flix'
+      'Portfólio interativo com elementos 3D e transições em WebGL usando Three.js.',
+    tags: ['Three.js', 'React Three Fiber', 'GSAP'],
+    category: 'Portfolios',
+    links: {
+      site: 'https://portfolio.example.com',
+      github: 'https://github.com/jadsonsantos/portfolio-3d'
     },
-    description:
-      'Plataforma interativa desenvolvida em ReactJS, que integra-se à API do The Movie DB para listar filmes, permitindo aos usuários adicionar e remover títulos da lista de favoritos com facilidade.'
-  },
-  {
-    image: 'case-clubecommerce.png',
-    tags: 'styled components . reactjs . typescript . stripe . firebase',
-    title: 'E-commerce ReactJS',
-    isActive: false,
-    link: {
-      site: 'https://clubecommerce.jadsonsantos.dev.br/',
-      github: 'https://github.com/jadsonsantos/club-ecommerce-frontend'
-    },
-    description:
-      'Plataforma de e-commerce construída com ReactJS. Oferece listagem de produtos, gerenciamento de carrinho de compras, checkout seguro com Stripe, e autenticação via email/senha ou Google. Projetada para uma experiência de usuário fluida e segura.'
+    isActive: true
   }
 ]
 
-export default cases
+const categories = ['Todos', 'Websites', 'SaaS', 'E-commerce', 'Portfolios']
+
+export { categories, projects }
