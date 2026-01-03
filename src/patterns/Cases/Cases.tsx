@@ -8,15 +8,15 @@ import Container from 'components/Container'
 
 import styles from './Cases.module.scss'
 
-import { categories, projects, ProjectType } from './data'
+import { Category, projects, ProjectType } from './data'
 
 import { ExternalLink, Github } from 'lucide-react'
 
 const Cases = () => {
-  const [activeCategory, setActiveCategory] = useState('Todos')
+  const [activeCategory, setActiveCategory] = useState<Category>(Category.Todos)
 
   const filteredProjects =
-    activeCategory === 'Todos'
+    activeCategory === Category.Todos
       ? projects.filter((p) => p.isActive)
       : projects.filter((p) => p.isActive && p.category === activeCategory)
 
@@ -30,7 +30,7 @@ const Cases = () => {
         </p>
 
         <div className={styles.cases__filters}>
-          {categories.map((category) => (
+          {Object.values(Category).map((category) => (
             <button
               key={category}
               className={`${styles.cases__filter} ${
