@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 import Container from 'components/Container'
 
@@ -15,10 +15,13 @@ import { ExternalLink, Github } from 'lucide-react'
 const Cases = () => {
   const [activeCategory, setActiveCategory] = useState<Category>(Category.Todos)
 
-  const filteredProjects =
-    activeCategory === Category.Todos
-      ? projects.filter((p) => p.isActive)
-      : projects.filter((p) => p.isActive && p.category === activeCategory)
+  const filteredProjects = useMemo(
+    () =>
+      activeCategory === Category.Todos
+        ? projects.filter((p) => p.isActive)
+        : projects.filter((p) => p.isActive && p.category === activeCategory),
+    [activeCategory]
+  )
 
   return (
     <section className={styles.cases} id="cases">
