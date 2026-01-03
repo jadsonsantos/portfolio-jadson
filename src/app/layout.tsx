@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 
-import './globals.css'
 import 'styles/base.scss'
+import './globals.css'
 
-import { Analytics } from '@vercel/analytics/react'
+import Analytics from 'components/Analytics'
+
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { roboto, inter } from 'styles/fonts'
+import { inter, roboto } from 'styles/fonts'
 
 export const metadata: Metadata = {
   title: 'Jadson Santos',
@@ -21,8 +23,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.variable} ${roboto.variable}`}>
-        {children}
         <Analytics />
+        {children}
+        <VercelAnalytics />
         <SpeedInsights />
       </body>
     </html>

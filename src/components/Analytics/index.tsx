@@ -1,21 +1,22 @@
-const gaScript = () => {
-  return {
-    __html: `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING}'); 
-    `
-  }
-}
+import Script from 'next/script'
+
+const GA_TRACKING_ID = 'G-77604KQQCB'
 
 const Analytics = () => {
   return (
     <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING}`}
-      ></script>
-      <script dangerouslySetInnerHTML={gaScript()} />
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_TRACKING_ID}');
+        `}
+      </Script>
     </>
   )
 }
