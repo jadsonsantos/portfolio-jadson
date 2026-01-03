@@ -1,8 +1,12 @@
 import Script from 'next/script'
 
-const GA_TRACKING_ID = 'G-77604KQQCB'
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING
 
 const Analytics = () => {
+  if (!GA_TRACKING_ID) {
+    return null
+  }
+
   return (
     <>
       <Script
