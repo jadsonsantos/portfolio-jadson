@@ -1,14 +1,108 @@
 .footer {
-  padding: 40px 0;
-  background: #268071;
-  color: #fff;
-  font-family: var(--font-secondary);
-  font-size: 14px;
-  line-height: 21px;
+  padding: 60px 0 40px;
+  background-color: var(--background-card);
+  border-top: 1px solid var(--border-color);
 
-  &__container {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__brand {
+    max-width: 280px;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 16px 0 0;
+  }
+
+  &__columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+
+    @media (min-width: 768px) {
+      gap: 64px;
+    }
+  }
+
+  &__column {
+    min-width: 120px;
+  }
+
+  &__columnTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__socialLink {
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
   }
 }
