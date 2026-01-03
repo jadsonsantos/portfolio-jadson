@@ -2,7 +2,7 @@ import Container from 'components/Container'
 
 import styles from './Experience.module.scss'
 
-import { experiences } from '../About/data'
+import { experiences } from './data'
 
 import { Briefcase } from 'lucide-react'
 
