@@ -1,9 +1,18 @@
 const experiences = [
   {
+    id: 4,
+    title: 'Desenvolvedor Front-End',
+    company: 'Lumis',
+    period: 'Jan 2026 - Ago 2026',
+    description:
+      'Atuação em projetos de front-end, focando em performance, acessibilidade e integração com plataformas Lumis.',
+    technologies: ['Angular', 'Typescript', 'Lumis XP']
+  },
+  {
     id: 1,
     title: 'Desenvolvedor Front-End',
     company: 'Avanti',
-    period: '2024 - Presente',
+    period: '2024 - 2026',
     description:
       'Desenvolvimento e manutenção de aplicações front-end para e-commerces VTEX, com foco em performance e experiência do usuário.',
     technologies: ['Reactjs', 'Typescript', 'VTEX']
